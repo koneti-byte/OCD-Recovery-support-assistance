@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script src="https://cdn.botpress.cloud/webchat/v3.4/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/11/22/08/20251122085753-DSLJ99PL.js" defer></script>
+    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CalmMind OCD – Support & Awareness</title>
+  <meta name="description" content="OCD awareness, education, and self-reflection. Not a replacement for therapy."
+  />
+  <!-- Google Fonts: Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header id="navbar" class="navbar">
+    <div class="container nav-content">
+      <div class="logo">CalmMind OCD</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About OCD</a></li>
+          <li><a href="#symptoms" class="nav-link">Symptoms</a></li>
+          <li><a href="#assessment" class="nav-link">Self-Assessment</a></li>
+          <li><a href="#coping" class="nav-link">Coping</a></li>
+          <li><a href="#chatbot" class="nav-link" id="open-botpress">Chatbot</a></li>
+          <li><a href="#resources" class="nav-link">Resources</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Open menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Support for OCD, One Step at a Time</h1>
+          <p>This website offers education, self-awareness, and reflection tools for OCD. It is not a replacement for therapy or professional diagnosis.</p>
+          <div class="hero-buttons">
+            <a href="#assessment" class="btn btn-primary">Start Self-Assessment</a>
+            <a href="#about" class="btn btn-secondary">Learn About OCD</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-placeholder">
+            <i class="fa-solid fa-brain fa-5x"></i>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bg-shape"></div>
+    </section>
+
+    <!-- About OCD Section -->
+    <section id="about" class="about">
+      <div class="container about-content">
+        <div class="about-text">
+          <h2>What is OCD?</h2>
+          <p>Obsessive–Compulsive Disorder (OCD) is a mental health condition involving unwanted, intrusive thoughts (obsessions) and repetitive behaviors or mental acts (compulsions). These can cause distress and interfere with daily life.</p>
+          <p>OCD is not just about being neat or organized. It can affect anyone, and everyone’s experience is unique.</p>
+          <p class="info-note"><i class="fa-solid fa-circle-info"></i> This website is for education and self-reflection, not a diagnosis.</p>
+        </div>
+        <div class="about-info-card">
+          <h3>OCD Features</h3>
+          <ul>
+            <li>Obsessive thoughts</li>
+            <li>Repetitive behaviors</li>
+            <li>Mental rituals</li>
+            <li>Distress & anxiety</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Symptoms Card Grid -->
+    <section id="symptoms" class="symptoms">
+      <div class="container">
+        <h2>Common OCD Themes</h2>
+        <p class="subtitle">Everyone’s experience is unique, but some patterns are common.</p>
+        <div class="symptom-grid">
+          <div class="symptom-card">
+            <i class="fa-solid fa-soap"></i>
+            <h4>Contamination & Cleaning</h4>
+            <p>Frequent washing, cleaning, or avoiding germs due to fear of contamination.</p>
+          </div>
+          <div class="symptom-card">
+            <i class="fa-solid fa-lock"></i>
+            <h4>Checking</h4>
+            <p>Repeatedly checking doors, appliances, or tasks to prevent harm or mistakes.</p>
+          </div>
+          <div class="symptom-card">
+            <i class="fa-solid fa-border-all"></i>
+            <h4>Ordering & Symmetry</h4>
+            <p>Arranging items or actions until they feel "just right" or symmetrical.</p>
+          </div>
+          <div class="symptom-card">
+            <i class="fa-solid fa-brain"></i>
+            <h4>Intrusive Thoughts</h4>
+            <p>Unwanted, distressing thoughts or images that are hard to control.</p>
+          </div>
+          <div class="symptom-card">
+            <i class="fa-solid fa-box-open"></i>
+            <h4>Hoarding</h4>
+            <p>Difficulty discarding items, leading to clutter and distress.</p>
+          </div>
+          <div class="symptom-card">
+            <i class="fa-solid fa-question"></i>
+            <h4>Reassurance Seeking</h4>
+            <p>Frequently asking others for reassurance to reduce anxiety.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Self-Assessment Preview Section -->
+    <section id="assessment" class="assessment">
+      <div class="container">
+        <h2>Self-Assessment (Not a Diagnosis)</h2>
+        <p>This tool helps you reflect on your symptoms. It is not a replacement for professional assessment.</p>
+        <div id="quiz-area">
+          <button class="btn btn-primary" id="start-quiz-btn" type="button">Start Self-Assessment Quiz</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coping Strategies Section -->
+    <section id="coping" class="coping">
+      <div class="container coping-content">
+        <div class="coping-info">
+          <h2>Coping Strategies & Skills</h2>
+          <p><strong>CBT & ERP:</strong> Cognitive Behavioral Therapy (CBT) and Exposure & Response Prevention (ERP) are effective treatments for OCD. They help you face fears and reduce compulsive behaviors.</p>
+          <p><strong>Grounding techniques:</strong> Simple exercises to bring your focus to the present moment.</p>
+          <p><strong>Journaling:</strong> Writing down thoughts and triggers can help you understand patterns and progress.</p>
+        </div>
+        <div class="coping-strategies">
+          <div class="pill-card accordion" tabindex="0">
+            <div class="pill-title">Label thoughts as thoughts, not facts</div>
+            <div class="pill-content">Remind yourself that having a thought doesn’t make it true or dangerous.</div>
+          </div>
+          <div class="pill-card accordion" tabindex="0">
+            <div class="pill-title">Delay compulsions by a few minutes</div>
+            <div class="pill-content">Practice waiting before acting on a compulsion. The urge may lessen over time.</div>
+          </div>
+          <div class="pill-card accordion" tabindex="0">
+            <div class="pill-title">Practice breathing exercises</div>
+            <div class="pill-content">Slow, deep breaths can help calm anxiety and bring you back to the present.</div>
+          </div>
+          <div class="pill-card accordion" tabindex="0">
+            <div class="pill-title">Reach out to a trusted person</div>
+            <div class="pill-content">Talking to someone you trust can provide support and perspective.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chatbot Section (Botpress) -->
+    <section id="chatbot" class="chatbot">
+      <div class="container">
+        <h2>OCD Support Chatbot</h2>
+        <p class="subtitle">Friendly guidance for reflection and psychoeducation – not a therapist.</p>
+        <!-- Botpress widget info -->
+        <div style="text-align:center; margin:2em 0; color:var(--color-muted); font-size:1.1rem;">
+          <i class="fa-solid fa-robot" style="color:var(--color-primary);"></i>
+          The chatbot button is available in the bottom left corner of your screen.
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources & Emergency Help Section -->
+    <section id="resources" class="resources">
+      <div class="container resources-content">
+        <div class="resources-cards">
+          <div class="resource-card">
+            <h4>Find a Mental Health Professional</h4>
+            <p>Search for licensed therapists or counselors in your area who specialize in OCD.</p>
+          </div>
+          <div class="resource-card">
+            <h4>International OCD Foundation</h4>
+            <p>Visit the <a href="#">IOCDF website</a> for information, support, and resources.</p>
+          </div>
+          <div class="resource-card">
+            <h4>Books & Websites on OCD</h4>
+            <p>Explore recommended books and trusted websites to learn more about OCD.</p>
+          </div>
+        </div>
+        <div class="emergency-box">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <strong>If you are in crisis or having thoughts of self-harm, contact your local emergency number or a crisis helpline immediately.</strong>
+          <p>Example: National helpline / local services (replace with your country-specific info).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">Is this website a replacement for therapy?</button>
+            <div class="faq-answer">No. This website is for education and self-reflection only. It does not provide diagnosis, therapy, or emergency support.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can OCD be treated?</button>
+            <div class="faq-answer">Yes. OCD can be managed with evidence-based treatments like CBT and ERP. Professional help is recommended.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is it normal to have intrusive thoughts?</button>
+            <div class="faq-answer">Yes. Many people experience intrusive thoughts. It’s the response to these thoughts that can become distressing in OCD.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How accurate is the self-assessment?</button>
+            <div class="faq-answer">The self-assessment is for reflection only and is not a clinical tool. For diagnosis, consult a mental health professional.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">© 2025 CalmMind OCD. For awareness & education only.</div>
+      <div class="footer-right">
+        <a href="#" class="footer-link">Privacy</a>
+        <span>·</span>
+        <a href="#" class="footer-link">Terms</a>
+        <span>·</span>
+        <a href="#" class="footer-link">Contact</a>
+        <span class="footer-socials">
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-facebook"></i>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // OCD Self-Assessment Quiz Logic
+    const quizQuestions = [
+      { q: "How often do you feel the need to double-check things (like doors, locks, appliances)?", o: ["Rarely", "Sometimes", "Often", "Almost always"] },
+      { q: "How often do you double-check that the stove or oven is turned off when you leave the house?", o: ["Rarely", "Sometimes", "Often", "Almost always"] },
+      { q: "How often do you re-check the lights or appliances after turning them off?", o: ["Rarely", "Sometimes", "Often", "Almost always"] },
+      { q: "How often do you wash your hands when you feel they are slightly dirty?", o: ["Rarely", "Sometimes", "Often", "Almost always"] },
+      { q: "How often do you clean a surface right away if you notice a small spot of dirt or a spill?", o: ["Rarely", "Sometimes", "Often", "Almost always"] },
+      { q: "How often do you feel the need to fix or straighten objects when they are not arranged neatly?", o: ["Rarely", "Sometimes", "Often", "Almost always"] },
+      { q: "How often do you feel the need to count things in your daily life?", o: ["Rarely", "Sometimes", "Often", "Almost always"] },
+      { q: "How often do you repeat a simple action until it feels 'just right'?", o: ["Rarely", "Sometimes", "Often", "Almost always"] },
+      { q: "How often do you have an unwanted or upsetting thought that keeps coming back?", o: ["Rarely", "Sometimes", "Often", "Almost always"] },
+      { q: "How often do you feel upset if your daily routine is changed or disrupted?", o: ["Rarely", "Sometimes", "Often", "Almost always"] }
+    ];
+    const quizWeights = { "Rarely": 1, "Sometimes": 2, "Often": 3, "Almost always": 4 };
+    let quizState = { idx: 0, score: 0, answers: [] };
+    const quizArea = document.getElementById('quiz-area');
+    function renderQuizQuestion() {
+      const q = quizQuestions[quizState.idx];
+      let html = `<div class='question'><h3>Q${quizState.idx + 1} of ${quizQuestions.length}</h3><p>${q.q}</p><div class='options'>`;
+      q.o.forEach(opt => {
+        html += `<label><input type='radio' name='quizopt' value='${opt}'> ${opt}</label>`;
+      });
+      html += `</div><button class='btn btn-primary' id='next-quiz-btn' type='button'>${quizState.idx === quizQuestions.length - 1 ? 'Finish' : 'Next'}</button></div>`;
+      quizArea.innerHTML = html;
+      document.getElementById('next-quiz-btn').onclick = handleQuizNext;
+    }
+    function handleQuizNext() {
+      const selected = document.querySelector('input[name="quizopt"]:checked');
+      if (!selected) {
+        alert('Please select an option!');
+        return;
+      }
+      quizState.score += quizWeights[selected.value];
+      quizState.answers.push(selected.value);
+      quizState.idx++;
+      if (quizState.idx >= quizQuestions.length) {
+        showQuizResult();
+      } else {
+        renderQuizQuestion();
+      }
+    }
+    function showQuizResult() {
+      let result = '';
+      if (quizState.score < 18) result = 'Conclusion: Low OCD or no OCD';
+      else if (quizState.score <= 26) result = 'Conclusion: Mild to Moderate OCD behavior';
+      else if (quizState.score <= 34) result = 'Conclusion: Strong OCD traits — consider help';
+      else result = 'Conclusion: Severe OCD — seek professional support';
+      quizArea.innerHTML = `<div class='quiz-result'><h3>Your total score is: ${quizState.score}</h3><p>${result}</p><button class='btn btn-secondary' id='restart-quiz-btn' type='button'>Restart Quiz</button></div>`;
+      document.getElementById('restart-quiz-btn').onclick = () => {
+        quizState = { idx: 0, score: 0, answers: [] };
+        renderQuizQuestion();
+      };
+    }
+    const startQuizBtn = document.getElementById('start-quiz-btn');
+    if (startQuizBtn) {
+      startQuizBtn.onclick = () => {
+        quizState = { idx: 0, score: 0, answers: [] };
+        renderQuizQuestion();
+      };
+    }
+    // Navbar link triggers quiz scroll and start
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.getAttribute('href') === '#assessment') {
+        link.addEventListener('click', function(e) {
+          setTimeout(() => {
+            const btn = document.getElementById('start-quiz-btn');
+            if (btn) btn.click();
+          }, 400);
+        });
+      }
+    });
+  </script>
+  <script>
+    // Open Botpress widget when Chatbot nav or button is clicked
+    function openBotpressWidget() {
+      if (window.botpressWebChat) {
+        window.botpressWebChat.sendEvent({ type: 'show' });
+      }
+    }
+    document.getElementById('open-botpress').addEventListener('click', function(e) {
+      e.preventDefault();
+      openBotpressWidget();
+    });
+    var openBtn = document.getElementById('open-botpress-btn');
+    if (openBtn) {
+      openBtn.addEventListener('click', function() {
+        openBotpressWidget();
+      });
+    }
+  </script>
+</body>
+</html>

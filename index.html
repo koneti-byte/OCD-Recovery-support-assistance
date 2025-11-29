@@ -171,8 +171,23 @@
         <p class="subtitle">Friendly guidance for reflection and psychoeducation – not a therapist.</p>
         <!-- Botpress widget info -->
         <div style="text-align:center; margin:2em 0; color:var(--color-muted); font-size:1.1rem;">
-          <i class="fa-solid fa-robot" style="color:var(--color-primary);"></i>
-          The chatbot button is available in the bottom left corner of your screen.
+          <i class="fa-solid fa-robot" style="color:var(--color-primary);">The chatbot button is available in the Bottom Right Corner of your screen.</i>
+            <h2>How to use the chatbot</h2>
+            <p>Click the chatbot button in the bottom right corner to start a conversation. The chatbot can help you reflect on your thoughts and provide psychoeducation about OCD. Remember, it is not a substitute for professional therapy or diagnosis.</p>
+            <p><h3 id=>Example prompts:</h3>
+
+              <li id="bot">“Help me understand if my hand-washing is OCD or just habit.”</li>
+
+              <li id="bot">“I had a triggering thought; guide me through grounding.”</li>
+
+              <h3>Show that the chatbot:</h3>
+
+              <li id="bot">Educates about OCD.</li>
+
+              <li id="bot">Helps users label thoughts.</li>
+
+              <li id="bot">Suggests coping strategies, but never diagnoses.</li></p>
+
         </div>
       </div>
     </section>
@@ -187,7 +202,7 @@
           </div>
           <div class="resource-card">
             <h4>International OCD Foundation</h4>
-            <p>Visit the <a href="#">IOCDF website</a> for information, support, and resources.</p>
+            <p>Visit the <a href="https://iocdf.org/">IOCDF website</a> for information, support, and resources.</p>
           </div>
           <div class="resource-card">
             <h4>Books & Websites on OCD</h4>
@@ -196,8 +211,8 @@
         </div>
         <div class="emergency-box">
           <i class="fa-solid fa-triangle-exclamation"></i>
-          <strong>If you are in crisis or having thoughts of self-harm, contact your local emergency number or a crisis helpline immediately.</strong>
-          <p>Example: National helpline / local services (replace with your country-specific info).</p>
+          <strong>If you are in crisis or having thoughts of self-harm, please do not rely on this website..</strong>
+          <p>Contact: Tele MANAS(National mental health helpline) – 14416 / 1-800-891-4416, KIRAN – 1800-599-0019, or your local emergency number 108.</p>
         </div>
       </div>
     </section>
@@ -291,10 +306,10 @@
     }
     function showQuizResult() {
       let result = '';
-      if (quizState.score < 18) result = 'Conclusion: Low OCD or no OCD';
-      else if (quizState.score <= 26) result = 'Conclusion: Mild to Moderate OCD behavior';
-      else if (quizState.score <= 34) result = 'Conclusion: Strong OCD traits — consider help';
-      else result = 'Conclusion: Severe OCD — seek professional support';
+      if (quizState.score < 18) result = '“Your responses show very few signs of OCD-like patterns. Everyone experiences intrusive thoughts sometimes — it’s normal. If anything still worries you, you can always explore the chatbot for guidance.”';
+      else if (quizState.score <= 26) result = 'You may be experiencing some OCD-like thoughts or habits. This doesn’t mean you have OCD — it simply suggests that some patterns might be affecting you. Exploring coping strategies or learning ERP-based responses may be helpful.';
+      else if (quizState.score <= 34) result = 'Your answers show stronger OCD-related patterns that may be causing stress or interfering with your daily routine. It might help to talk to a mental health professional and continue using ERP-style techniques for support';
+      else result = 'Your responses show significant distress related to intrusive thoughts or compulsive behaviours. You don’t have to manage this alone — consider reaching out to a mental health professional or using helplines if you feel overwhelmed. You deserve support';
       quizArea.innerHTML = `<div class='quiz-result'><h3>Your total score is: ${quizState.score}</h3><p>${result}</p><button class='btn btn-secondary' id='restart-quiz-btn' type='button'>Restart Quiz</button></div>`;
       document.getElementById('restart-quiz-btn').onclick = () => {
         quizState = { idx: 0, score: 0, answers: [] };

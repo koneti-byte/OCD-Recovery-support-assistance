@@ -49,6 +49,14 @@ h1, h2, h3, h4 {
   color: var(--color-primary);
   margin-top: 0;
 }
+#bot{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 1em 0;
+}
 
 h1 { font-size: 2.5rem; }
 h2 { font-size: 2rem; }
@@ -729,4 +737,42 @@ nav {
   h1 { font-size: 1.7rem; }
   h2 { font-size: 1.3rem; }
   .btn { font-size: 1rem; padding: 0.7em 1.2em; }
+}
+
+/* =====================
+   Botpress floating widget adjustments
+   Targets common Botpress webchat DOM/iframe selectors and forces
+   a floating widget in the bottom-right corner. Uses !important
+   to override embedded widget styles where necessary.
+   ===================== */
+.bpw-widget,
+.botpress-widget,
+#bp-web-widget,
+#bpw-webchat,
+.bpw__container,
+[class*="botpress"],
+iframe[src*="botpress"] {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 99999 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25) !important;
+  max-width: 420px !important;
+  width: auto !important;
+  max-height: 80vh !important;
+  overflow: hidden !important;
+  transform: none !important;
+}
+
+@media (max-width: 420px) {
+  .bpw-widget,
+  .botpress-widget,
+  [id*="botpress"],
+  iframe[src*="botpress"] {
+    right: 12px !important;
+    left: 12px !important;
+    bottom: 12px !important;
+    max-width: calc(100% - 24px) !important;
+  }
 }

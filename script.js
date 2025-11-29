@@ -121,3 +121,60 @@ hamburger.addEventListener('keydown', function(e) {
 });
 
 // ========== End of script.js ==========
+
+// ========== Botpress float helper ==========
+(function() {
+  const candidateSelectors = [
+    '.bpw-widget',
+    '.botpress-widget',
+    '#bp-web-widget',
+    '#bpw-webchat',
+    '.bpw__container',
+    '[id*="botpress"]',
+    'iframe[src*="botpress"]'
+  ];
+
+  function applyFloatingStyle(el) {
+    if (!el || el.dataset.cmFloating) return;
+    el.style.position = 'fixed';
+    el.style.bottom = '20px';
+    el.style.right = '20px';
+    el.style.zIndex = '99999';
+    el.style.borderRadius = '12px';
+    el.style.boxShadow = '0 8px 24px rgba(15,23,42,0.25)';
+    el.style.maxWidth = '420px';
+    el.style.maxHeight = '80vh';
+    el.style.overflow = 'hidden';
+    el.style.transform = 'none';
+    el.dataset.cmFloating = '1';
+  }
+
+  function findAndFloat() {
+    candidateSelectors.forEach(sel => {
+      const el = document.querySelector(sel);
+      if (el) applyFloatingStyle(el);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', findAndFloat);
+  window.addEventListener('load', findAndFloat);
+
+  const observer = new MutationObserver((mutations) => {
+    for (const m of mutations) {
+      if (m.addedNodes && m.addedNodes.length) {
+        findAndFloat();
+      }
+    }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // If Botpress API initializes later, ensure widget is visible and floated
+  const checkInterval = setInterval(() => {
+    if (window.botpressWebChat) {
+      try { window.botpressWebChat.sendEvent({ type: 'show' }); } catch (e) {}
+      findAndFloat();
+      clearInterval(checkInterval);
+    }
+  }, 500);
+  setTimeout(() => clearInterval(checkInterval), 10000);
+})();
